@@ -414,13 +414,24 @@ ul.list-check li::before {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-section .container {
-        grid-template-columns: 1fr;
+    .hero-section {
+        padding-top: 140px;
+        /* Increased to clear the fixed header */
         text-align: center;
     }
 
+    .hero-section .container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .hero-subtitle {
+        margin: 0 auto var(--spacing-md);
     }
 
     .hero-content {
@@ -429,7 +440,14 @@ ul.list-check li::before {
 
     .hero-image {
         order: 1;
-        margin-bottom: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-img-content {
+        max-width: 80%;
+        /* Prevent image from being too huge on mobile */
     }
 
     .comparison-grid {
